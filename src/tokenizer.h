@@ -1,5 +1,5 @@
-#ifndef _TOKENIZER_
-#define _TOKENIZER_
+#ifndef TOKENIZER_H
+#define TOKENIZER_H
 
 
 /* Return true (non-zero) if c is a whitespace characer
@@ -9,13 +9,16 @@ int space_char(char c);
 
 /* Return true (non-zero) if c is a non-whitespace 
    character (not tab or space).  
-   Zero terminators are not printable (therefore false) */ 
+   Zero terminators are not printable (therefore false) */
 int non_space_char(char c);
+
+/* My own string length function*/
+int string_length(char *str);
 
 /* Returns a pointer to the first character of the next 
    space-separated word in zero-terminated str.  Return a zero pointer if 
    str does not contain any words. */
-char *word_start(char *str); 
+char *word_start(char *str);
 
 /* Returns a pointer terminator char following *word */
 char *word_terminator(char *word);
@@ -29,7 +32,6 @@ char *copy_str(char *inStr, short len);
 
 /* Returns a freshly allocated zero-terminated vector of freshly allocated 
    space-separated tokens from zero-terminated str.
-
    For example, tokenize("hello world string") would result in:
      tokens[0] = "hello"
      tokens[1] = "world"

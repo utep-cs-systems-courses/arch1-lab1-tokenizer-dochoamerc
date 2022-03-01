@@ -1,5 +1,5 @@
-#ifndef _HISTORY_
-#define _HISTORY_
+#ifndef HISTORY_H
+#define HISTORY_H
 
 typedef struct s_Item {
   int id;
