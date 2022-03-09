@@ -141,8 +141,7 @@ char **tokenize(char* str){
 
 /* Prints all tokens. */
 void print_tokens(char **tokens){
-  size_t size = sizeof(*tokens) / sizeof(*tokens[0]);
-  for(int i = 0; tokens[i] != 0; i++){
+  for(int i = 0; *tokens[i] != '\0'; i++){
     printf("%s\n", tokens[i]);
   }
 
